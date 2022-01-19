@@ -1,0 +1,35 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "Basic Chat App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vedran77/chat-app.git"
+  },
+  "keywords": [
+    "Chat",
+    "Application",
+    "ReactJS",
+    "TypeScript",
+    "JavaScript",
+    "message"
+  ],
+  "author": "Vedran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vedran77/chat-app/issues"
+  },
+  "homepage": "https://github.com/vedran77/chat-app#readme",
+  "dependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/lodash": "^4.14.178",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "lodash": "^4.17.21"
+  }
+}
