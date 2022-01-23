@@ -1,0 +1,10 @@
+{
+    "API_TOKEN": "Ol6LWG2exrsqiZvxfJtzkHbKrWH2x1tL7QG0jGlGAKNcDD1tvvyGnbOX7jDZnW64MCz2VZERn1BSAkFy8c1lmaBg19bF03EAB9u5Frfit2d0is",
+    "database": {
+        "driver": "mysql",
+        "host": "localhost",
+        "username": "root",
+        "password": "",
+        "database": "chatapp"
+    }
+}

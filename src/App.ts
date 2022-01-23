@@ -1,3 +1,7 @@
+import { Config } from "./Config";
+import { Container } from "./Container";
+import { WebServer } from "./WebServer";
+
 class App {
     public static readonly APP_URL: string = "http://localhost";
     public static readonly APP_PORT: number = 3000;
@@ -13,7 +17,14 @@ class App {
     }
 
     public start(): void {
-        
+        // konfiguracija
+        Config.load();
+
+        // starting web server
+        WebServer.instance.start(); 
+
+        // container
+        Container.instance.load();
     }
 }
 
