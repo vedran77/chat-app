@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 import axios, { AxiosResponse } from "axios";
 import { ref, Ref } from "vue";
+import { validate } from "email-validator";
 
 import { SERVER_URL, SERVER_PORT } from "../Constants";
-import { validate } from "email-validator";
+import { changeRoute } from "../router"
 
 import Navbar from "../components/Navbar.vue";
 import Footer from "../components/Footer.vue";
@@ -31,6 +32,12 @@ function registerAccount(): void {
         password: password.value
     }).then((response: AxiosResponse<any, any>) => {
         console.log(response.data);
+        if (response.data.msg !== undefined) {
+            console.log(response.data.msg);
+            return;
+        }
+        localStorage.setItem("token", response.data.token);
+        changeRoute("home");
     });
 }
 </script>
