@@ -1,12 +1,10 @@
 <script lang="ts" setup>
-import { defineProps } from "vue";
 
-const props = defineProps({
-    loggedIn: {
-        type: Boolean,
-        default: false,
-    }
-});
+let loggedIn = false;
+
+if (localStorage.getItem("token") !== null) {
+    loggedIn = true;
+}
 </script>
 
 <template>

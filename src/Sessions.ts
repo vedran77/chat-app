@@ -25,11 +25,22 @@ class Sessions {
         const db: IDatabase = Container.instance.get("database");
         const q: string = "INSERT INTO sessions (userID, token, expires) VALUES (?, ?, ?)";
 
-        db.insert(q, [userID, token, Date.now()]);
+        db.insert(q, [userID, token, Date.now() + (3600 * 60)]);
 
         return token;
     }
 
+    /**
+     * @description Vraca ID usera uz pomoc tokena
+     */
+
+    public async getUserId(token: string): Promise<number> {
+        const db: IDatabase = Container.instance.get("database");
+        const q: string = "SELECT userID FROM sessions WHERE token = ? LIMIT 1";
+        const results: any[] = await db.select(q, [token]);
+
+        return results[0].userID as number;
+    }
 }
 
 export { Sessions }

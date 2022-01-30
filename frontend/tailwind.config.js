@@ -27,7 +27,8 @@ module.exports = {
       pink: colors.pink,
       sky: colors.sky,
       'charcoal': '#393E46',
-      'mist': '#9795A2'
+      'mist': '#9795A2',
+      'flame': '#D65A31'
     },
     spacing: {
       px: '1px',
@@ -65,6 +66,7 @@ module.exports = {
       72: '18rem',
       80: '20rem',
       96: '24rem',
+      'lg': '32rem',
     },
     animation: {
       none: 'none',
@@ -155,6 +157,7 @@ module.exports = {
       DEFAULT: '1px',
       0: '0px',
       2: '2px',
+      3: '3px',
       4: '4px',
       8: '8px',
     },
@@ -527,6 +530,7 @@ module.exports = {
     maxWidth: (theme, { breakpoints }) => ({
       none: 'none',
       0: '0rem',
+      small: '17rem',
       xs: '20rem',
       sm: '24rem',
       md: '28rem',
@@ -546,6 +550,7 @@ module.exports = {
     }),
     minHeight: {
       0: '0px',
+      'lg': '32rem',
       full: '100%',
       screen: '100vh',
     },
