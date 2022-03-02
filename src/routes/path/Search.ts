@@ -23,6 +23,7 @@ class Search extends RouteBase implements IRoute {
             OR friends.user_two = ?) AND \ 
             CONCAT(users.first_name, ' ', users.last_name) \ 
             LIKE CONCAT(?, '%') \ 
+            GROUP BY friends.user_one, friends.user_two \
             ORDER BY messages.sent_at ASC LIMIT 5`;
         
         const results: any[] = await db.select(q, [userID, userID, userID, userID, req.body.name]);

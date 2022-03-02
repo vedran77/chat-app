@@ -3,3 +3,4 @@ export { Login } from "./Login";
 export { LoggedIn } from "./LoggedIn";
 export { Chats } from "./Chats";
 export { Search } from "./Search";
+export { Messages } from "./Messages";

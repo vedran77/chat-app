@@ -21,7 +21,8 @@ class Chats extends RouteBase implements IRoute {
             ON (messages.sender = users.ID) OR (messages.receiver = users.ID) \ 
             WHERE friends.user_one = ? \ 
             OR friends.user_two = ? \ 
-            ORDER BY messages.sent_at ASC LIMIT 20`;
+            GROUP BY friends.user_one, friends.user_two \
+            ORDER BY messages.sent_at ASC LIMIT 10`;
 
         const results: any[] = await db.select(q, [userID, userID, userID, userID]);
         const chats = [];

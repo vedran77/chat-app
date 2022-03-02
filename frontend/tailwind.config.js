@@ -28,7 +28,8 @@ module.exports = {
       sky: colors.sky,
       'charcoal': '#393E46',
       'mist': '#9795A2',
-      'flame': '#D65A31'
+      'flame': '#D65A31',
+      'light': '#F5F7FB',
     },
     spacing: {
       px: '1px',
@@ -67,6 +68,8 @@ module.exports = {
       80: '20rem',
       96: '24rem',
       'lg': '32rem',
+      'lg-x': '35rem',
+      '6x': '45rem',
     },
     animation: {
       none: 'none',
